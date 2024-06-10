@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="login">
+	<h1>Student Placement</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Quants" placeholder="Quants" required="required" />
+        <input type="text" name="LogicalReasoning" placeholder="LogicalReasoning" required="required" />
+		<input type="text" name="Verbal" placeholder="Verbal" required="required" />
+		<input type="text" name="Programming" placeholder="Programming" required="required" />
+        <input type="text" name="CGPA" placeholder="CGPA" required="required" />
+		<input type="text" name="Networking" placeholder="Networking" required="required" />
+		<input type="text" name="CloudComp" placeholder="CloudComp" required="required" />
+		<input type="text" name="WebServices" placeholder="WebServices" required="required" />
+		<input type="text" name="DataAnalytics" placeholder="DataAnalytics" required="required" />
+		<input type="text" name="QualityAssurance" placeholder="QualityAssurance" required="required" />
+		<input type="text" name="AI" placeholder="AI" required="required" />
+		<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
+
+
+
+</body>
+</html>
